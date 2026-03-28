@@ -15,6 +15,11 @@ import Lesson12 from './components/Lesson12'
 import Lesson13 from './components/Lesson13'
 import Lesson14 from './components/Lesson14'
 import Lesson15 from './components/Lesson15'
+import Lesson16 from './components/Lesson16'
+import Lesson17 from './components/Lesson17'
+import Lesson18 from './components/Lesson18'
+import Lesson19 from './components/Lesson19'
+import Lesson20 from './components/Lesson20'
 
 const lessons = {
   lesson1: Lesson1,
@@ -32,9 +37,12 @@ const lessons = {
   lesson13: Lesson13,
   lesson14: Lesson14,
   lesson15: Lesson15,
+  lesson16: Lesson16,
+  lesson17: Lesson17,
+  lesson18: Lesson18,
+  lesson19: Lesson19,
+  lesson20: Lesson20,
 
-
-  
 } as const
 
 type LessonKey = keyof typeof lessons
@@ -53,7 +61,7 @@ function App() {
         value={lesson}
         onChange={(e) => setLesson(e.target.value as LessonKey)}
       >
-        {Array.from({ length: 15 }, (_, i) => i + 1).map((n) => (
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((n) => (
           <option key={n} value={`lesson${n}`}>
             Lección {n}
           </option>
